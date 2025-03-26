@@ -55,7 +55,7 @@ def correction(word, type):
         return sorted(candidates(word), key=P)
 
 
-word_ct = Counter(words(open(r'C:\Users\shamb\The codes\college\big.txt').read()))
+word_ct = Counter(words(open(r'{insert path to big.txt}').read()))
 
 def main(txt):
     global word_ct
