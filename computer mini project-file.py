@@ -7,16 +7,6 @@ from collections import Counter
 from string import ascii_lowercase as letters
 
 
-
-# def words(text): 
-#     return re.findall(r'\w+', text.lower())
-
-# def known(words):
-#     "The subset of `words` that appear in the dictionary of word_ct."
-#     #print(words(open(r'C:\Users\shamb\The codes\college\big.txt').read()))
-#     Counter(words(open(r'C:\Users\shamb\The codes\college\big.txt').read())))
-
-#     return set(w for w in words if w in word_ct)
 def words(text): 
     return re.findall(r'\w+', text.lower())
 
