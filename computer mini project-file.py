@@ -34,7 +34,6 @@ def candidates(word):
 
 def P(word): 
     "Probability of the word appearing in big.txt"
-    # word_ct = Counter(words(open(r'C:\Users\shamb\The codes\college\big.txt').read()))
     global word_ct
     N = sum(word_ct.values())
     return word_ct[word] / N
@@ -52,7 +51,7 @@ word_ct = Counter(words(open(r'C:\Users\shamb\The codes\college\big.txt').read()
 def main(txt):
     global word_ct
     print(word_ct)
-#txt = input("Enter text: ").split()
+
 
     print("Most probable corrections:")
     for i in txt:
@@ -73,26 +72,16 @@ def file_spellcheck():
     f = open(name + '.txt','r')
     content = f.read()
     if content != '':
-        #label = tk.Label(win,text = name)
         print(content)
         label = tk.Label(win, text = content)
         suggestion = main(content.split())
         label_sugg = tk.Label(win, text = suggestion)
         label.pack()
         label_sugg.pack()
-        #out = tk.Text(win,height = 30, width = 40)
-        #label.grid(row = 41,column= 1)
     else:
         pass
 
 
-#def file_spellcheck():
-#    name = box.get()
-#    f = open(name+'.txt','r')
-#    content = f.read()
-#    #call spellcheck on content
-#    label = tk.Label(win,text=coxntent)
-#   label.pack()
 
 win = tk.Tk()
 win.geometry('1000x1000')
