@@ -4,17 +4,6 @@ import re
 from collections import Counter
 from string import ascii_lowercase as letters
 
-
-
-# def words(text): 
-#     return re.findall(r'\w+', text.lower())
-
-# def known(words):
-#     "The subset of `words` that appear in the dictionary of word_ct."
-#     #print(words(open(r'C:\Users\shamb\The codes\college\big.txt').read()))
-#     Counter(words(open(r'C:\Users\shamb\The codes\college\big.txt').read())))
-
-#     return set(w for w in words if w in word_ct)
 def words(text): 
     return re.findall(r'\w+', text.lower())
 
@@ -60,7 +49,7 @@ word_ct = Counter(words(open(r'{insert path to big.txt}').read()))
 def main(txt):
     global word_ct
     print(word_ct)
-#txt = input("Enter text: ").split()
+
 
     print("Most probable corrections:")
     for i in txt:
@@ -79,7 +68,6 @@ def main(txt):
 def text_spellcheck():
     if text.get(1.0,'end-1c') is not None:
         name = text.get(1.0,'end-1c')
-        #label = tk.Label(win,text = name)
         print(name)
 
         suggestion = main(name.split())
@@ -95,13 +83,6 @@ def reset():
 
 win = tk.Tk()
 win.geometry('1000x1000')
-
-#leftframe = tk.Frame(win)
-#leftframe.grid( row = 0, column = 1)
-
-#midframe = tk.Frame(win)
-#midframe.grid(row = 41, column = 1)
-
 
 text = tk.Text(win, height = 30, width = 40)
 text.grid(column=1,row=40)
